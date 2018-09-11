@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+{%block content %}
+
+	
+	<h1> You are at Customer list page</h1>
+	<table class="table">
+		<tr>
+		<th> Firstname   </th>
+		<th> Lastname   </th>
+		<th> Phonenumber   </th>
+		<th> Address   </th>
+		<th> Email   </th>
+		<th>  </th>
+		</tr>
+		
+		{%for i in data %}
+		<tr>
+		<td> {{i.first_name}} </td>
+		<td> {{i.last_name}}</td>
+		<td> {{i.phone_number}}</td>
+		<td> {{i.address}}</td>
+		<td>{{i.email}}</td>
+		<td> 
+			<a href="{{i.id}}"> Remove</a>
+
+		 </td>
+		</tr>
+		{%endfor%}
+	</table>
+{%endblock%}	

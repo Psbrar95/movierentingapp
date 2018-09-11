@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{%block content %}
+
+	
+	<h1> You are at movie list page</h1>
+	<table class="table">
+		<tr>
+		<th> Name   </th>
+		<th> Genre  </th>
+		<th> Price  </th>
+		<th> Year   </th>
+		<th> </th>
+		</tr>
+		
+		{%for i in data %}
+		<tr>
+		<td> {{i.name}} </td>
+		<td> {{i.genre}}</td>
+		<td> {{i.price}}</td>
+		<td> {{i.year}}</td>
+		<td> 
+			<a href="{{i.id}}"> Remove</a>
+
+		 </td> 
+		</tr>
+		{%endfor%}
+	</table>
+{%endblock%}	

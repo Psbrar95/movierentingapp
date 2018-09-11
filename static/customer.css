@@ -1,0 +1,12 @@
+/*#outer{
+	border: 1px solid black;
+}*/
+#myp{color: red;}
+
+table,th,td{
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+th,td{
+	width: 180px;
+}

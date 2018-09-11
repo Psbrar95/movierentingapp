@@ -1,0 +1,32 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<title> Movie Renting </title>
+</head>
+
+<body>
+	<h1> Movie return</h1>
+		<h1> Return movie here</h1>
+	<table class="table">
+		<tr>
+		<th> Name  </th>
+		<th> movie </th>
+	
+		<th>  </th>
+		</tr>
+		
+		{%for i in data %}
+		<tr>
+		<td> {{i.first_name}} {{i.last_name}} </td>
+		<td>{{i.movie}}</td>
+		<td> 
+			<a href="{{i.id}}"> Remove</a>
+
+		 </td>
+		</tr>
+		{%endfor%}
+	</table>	
+</body>
+</html>
